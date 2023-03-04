@@ -2,12 +2,6 @@
 # <h1 align="center">Hello, my name is Pavel!👋</h1>
 # <h3 align="center">Beginner python developer from Russia</h3>
 - - - 
-### Аbout me:
-
-<div>   
-</div>
-        
-- - -
 
 ### Technologies:
 
