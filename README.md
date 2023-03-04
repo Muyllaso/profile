@@ -13,6 +13,7 @@
 
 <div>
  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="python" alt="python" width="40" height="40"/>&nbsp;
+ <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="html" alt="html" width="40" height="40"/>&nbsp;
 </div>
 
 - - -
@@ -35,7 +36,8 @@
 ### Completed courses:
 
 <div>
- <img src="https://www.sololearn.com/certificates/course/en/24077676/1073/landscape/png" title="pythoncore" alt="pythoncore" width="300" height="250"/>
+ <img src="https://www.sololearn.com/certificates/course/en/24077676/1073/landscape/png" title="pythoncore" alt="pythoncore" width="400" height="300"/>
+ <img src="https://www.sololearn.com/certificates/course/en/24077676/1014/landscape/png" title="html" alt="html" width="400" height="300"/>
 </div>
 
 - - -
