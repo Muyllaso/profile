@@ -8,7 +8,7 @@
 <div>
  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="python" alt="python" width="40" height="40"/>&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="html" alt="html" width="40" height="40"/>&nbsp;
- <img src="https://github.com/Muyllaso/Muyllaso/blob/main/Icons/Expression2.svg?sanitize=true" title="Expression2" alt="Expression2" width="40" height="40"/>&nbsp;
+ <img src="https://github.com/muyllaso/muyllaso/blob/main/icons/expression2.svg?sanitize=true" title="expression2" alt="expression2" width="40" height="40"/>&nbsp;
 </div>
 
 - - -
