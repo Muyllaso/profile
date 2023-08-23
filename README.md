@@ -8,7 +8,7 @@
 <div>
  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" title="python" alt="python" width="40" height="40"/>&nbsp;
  <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="html" alt="html" width="40" height="40"/>&nbsp;
- <img src="https://discord.com/channels/1144047316676911144/1144047317117304974/1144047344745193522" title="Exprassion2" alt="html" width="40" height="40"/>&nbsp;
+ <img src="https://cdn.discordapp.com/attachments/1144047317117304974/1144047344430624808/Expression2.svg" title="Exprassion2" alt="html" width="40" height="40"/>&nbsp;
 </div>
 
 - - -
