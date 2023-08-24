@@ -1,0 +1,44 @@
+@name build from props
+@model models/sprops/cuboids/height12/size_1/cube_12x12x12.mdl
+@persist [Default_Material Mesh_Material Invisible_Material]:string Position:vector
+@persist Player:array
+
+interval(100)
+
+if(first()){
+    
+    #------------------------
+    Model = "YOUR MODEL"
+    Default_Material = "YOUR BUTTON"
+    Mesh_Material = "YOUR BUTTON"
+    Invisible_Material = "YOUR BUTTON"
+    Position = vec(0,0,0) #Model_Pos (X,Y,Z)
+    #------------------------
+    
+    entity():setColor(vec(255,0,0))
+    
+    holoCreate(0)
+    holoModel(0,Model)
+    holoParent(0,entity())
+    holoPos(0,entity():toWorld(Position))
+    
+}else{
+    
+    findExcludePlayer(owner())
+    findByClass("player")
+    Player = findToArray()
+    
+    holoVisible(0,Player,0)
+    
+    if(owner():keyPressed(Default_Material)){
+        holoMaterial(0,"")
+    }
+    
+    if(owner():keyPressed(Mesh_Material)){
+        holoMaterial(0,"models/wireframe")
+    }
+    
+    if(owner():keyPressed(Invisible_Material)){
+        holoMaterial(0,"models/weapons/v_smg1/texture5")
+    }
+}

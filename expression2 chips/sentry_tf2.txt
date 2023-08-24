@@ -1,0 +1,92 @@
+@name sentry_tf2
+@persist [E,O,Base]:entity Rotate List:array
+
+interval(100)
+
+E=entity()
+O=owner()
+
+if(first()){
+    
+    #-----------
+    Radius = 300
+    #-----------
+
+    findExcludePlayer(owner())
+    findByClass("player")
+    findInSphere(E:pos(),Radius)
+    findSortByDistance(E:pos())
+    List = findToArray()
+    E:setPos(E:pos() + vec(0,0,-21))
+    E:setColor(vec4(0)) #-21
+    holoCreate(0) holoModel(0, "models/sprops/cylinders/size_3/cylinder_6x24.mdl") holoParent(0, E) holoPos(0, E:pos() + vec(0,0,35)) holoScale(0, vec(1,1,0.6)) holoMaterial(0,"models/props/cs_assault/metal_stairs1")
+    holoCreate(1) holoModel(1, "models/sprops/cylinders/size_2/cylinder_3x3.mdl") holoParent(1, E) holoPos(1, E:pos() + vec(0,0,43)) holoScale(1, vec(1.5,1.5,0.5)) holoMaterial(1,"models/props/cs_assault/metal_stairs1")
+    holoCreate(2) holoModel(2, "models/sprops/geometry/fdisc_12.mdl") holoParent(2, E) holoPos(2, E:pos() + vec(0,0,44)) holoScale(2,vec(1.2,0.2,1.2)) holoAng(2, ang(0,0,90)) holoMaterial(2,"models/props/cs_assault/metal_stairs1")
+    holoCreate(3) holoModel(3, "models/sprops/cylinders/size_2/cylinder_3x30.mdl") holoParent(3, E) holoPos(3, E:pos() + vec(0,0,36)) holoScale(3,vec(1.2,1.2,0.7)) holoAng(3, ang(0,0,90)) holoMaterial(3,"models/props/cs_assault/metal_stairs1")
+    holoCreate(4) holoModel(4, "models/sprops/cylinders/size_3/cylinder_6x12.mdl") holoParent(4, E) holoPos(4, E:pos() + vec(0,0,36)) holoScale(4,vec(0.9,0.9,0.7)) holoAng(4, ang(0,0,90)) holoMaterial(4,"models/props/cs_assault/metal_stairs1")
+    holoCreate(5) holoModel(5, "models/sprops/rectangles/size_2/rect_12x12x3.mdl") holoParent(5, E) holoPos(5, E:pos() + vec(0,-8,36)) holoScale(5,vec(0.9,0.9,0.5)) holoAng(5, ang(20,0,90)) holoMaterial(5,"models/props_canal/metalcrate001d")
+    holoCreate(6) holoModel(6, "models/sprops/rectangles/size_2/rect_12x12x3.mdl") holoParent(6, E) holoPos(6, E:pos() + vec(0,8,36)) holoScale(6,vec(0.9,0.9,0.5)) holoAng(6, ang(20,0,90)) holoMaterial(6,"models/props_canal/metalcrate001d")
+    holoCreate(7) holoModel(7, "models/sprops/geometry/qdisc_24.mdl") holoParent(7, E) holoPos(7, E:pos() + vec(-8,-8,38.8)) holoScale(7,vec(0.9,0.5,0.9)) holoAng(7, ang(200,0,0)) holoMaterial(7,"models/props_canal/metalcrate001d")
+    holoCreate(8) holoModel(8, "models/sprops/geometry/qdisc_24.mdl") holoParent(8, E) holoPos(8, E:pos() + vec(-8,8,38.8)) holoScale(8,vec(0.9,0.5,0.9)) holoAng(8, ang(200,0,0)) holoMaterial(8,"models/props_canal/metalcrate001d")
+    holoCreate(9) holoModel(9, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(9, E) holoPos(9, E:pos() + vec(9,8,29.8)) holoScale(9,vec(0.9,0.9,0.5)) holoAng(9, ang(20,0,90)) holoMaterial(9,"models/props_canal/metalcrate001d")
+    holoCreate(10) holoModel(10, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(10, E) holoPos(10, E:pos() + vec(9,-8,29.8)) holoScale(10,vec(0.9,0.9,0.5)) holoAng(10, ang(20,0,90)) holoMaterial(10,"models/props_canal/metalcrate001d")
+    holoCreate(11) holoModel(11, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(11, E) holoPos(11, E:pos() + vec(19,-8,26.2)) holoScale(11,vec(1,0.7,0.3)) holoAng(11, ang(20,0,90)) holoMaterial(11,"phoenix_storms/concrete1")
+    holoCreate(12) holoModel(12, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(12, E) holoPos(12, E:pos() + vec(19,8,26.2)) holoScale(12,vec(1,0.7,0.3)) holoAng(12, ang(20,0,90)) holoMaterial(12,"phoenix_storms/concrete1")
+    holoCreate(13) holoModel(13, "models/sprops/geometry/qdisc_12.mdl") holoParent(13, E) holoPos(13, E:pos() + vec(24.5,-8,28.3)) holoScale(13,vec(0.7,0.3,0.7)) holoAng(13, ang(290,0,0)) holoMaterial(13,"phoenix_storms/concrete1")
+    holoCreate(14) holoModel(14, "models/sprops/geometry/qdisc_12.mdl") holoParent(14, E) holoPos(14, E:pos() + vec(24.5,8,28.3)) holoScale(14,vec(0.7,0.3,0.7)) holoAng(14, ang(290,0,0)) holoMaterial(14,"phoenix_storms/concrete1")
+    holoCreate(15) holoModel(15, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(15, E) holoPos(15, E:pos() + vec(31.3,-8,25.8)) holoScale(15,vec(1,0.7,0.3)) holoAng(15, ang(20,0,90)) holoMaterial(15,"phoenix_storms/concrete1")
+    holoCreate(16) holoModel(16, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(16, E) holoPos(16, E:pos() + vec(31.3,8,25.8)) holoScale(16,vec(1,0.7,0.3)) holoAng(16, ang(20,0,90)) holoMaterial(16,"phoenix_storms/concrete1")
+    holoCreate(17) holoModel(17, "models/sprops/geometry/fdisc_12.mdl") holoParent(17, E) holoPos(17, E:pos() + vec(0,9.6,36)) holoScale(17, vec(0.6,0.3,0.6)) holoAng(17, ang(0,0,0)) holoMaterial(17,"phoenix_storms/concrete1")
+    holoCreate(18) holoModel(18, "models/sprops/geometry/fdisc_12.mdl") holoParent(18, E) holoPos(18, E:pos() + vec(0,-9.6,36)) holoScale(18, vec(0.6,0.3,0.6)) holoAng(18, ang(0,0,0)) holoMaterial(18,"phoenix_storms/concrete1")
+    holoCreate(19) holoModel(19, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(19, E) holoPos(19, E:pos() + vec(5,-9.6,38.24)) holoScale(19, vec(0.9,0.15,0.9)) holoAng(19, ang(0,0,0)) holoMaterial(19,"phoenix_storms/concrete1")
+    holoCreate(20) holoModel(20, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(20, E) holoPos(20, E:pos() + vec(5,9.6,38.24)) holoScale(20, vec(0.9,0.15,0.9)) holoAng(20, ang(0,0,0)) holoMaterial(20,"phoenix_storms/concrete1")
+    holoCreate(21) holoModel(21, "models/sprops/rectangles/size_1/rect_3x18x3.mdl") holoParent(21, E) holoPos(21, E:pos() + vec(9.25,0,38.24)) holoScale(21, vec(1.1,0.75,0.9)) holoAng(21, ang(0,90,0)) holoMaterial(21,"phoenix_storms/concrete1")
+    holoCreate(22) holoModel(22, "models/sprops/geometry/sphere_3.mdl") holoParent(22, E) holoPos(22, E:pos() + vec(0,9.7,35.9)) holoScale(22, vec(0.8,0.8,0.8)) holoMaterial(22,"phoenix_storms/concrete1")
+    holoCreate(23) holoModel(23, "models/sprops/geometry/sphere_3.mdl") holoParent(23, E) holoPos(23, E:pos() + vec(0,-9.7,35.9)) holoScale(23, vec(0.8,0.8,0.8)) holoMaterial(23,"phoenix_storms/concrete1")
+    holoCreate(24) holoModel(24, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(24, E) holoPos(24, E:pos() + vec(-6,-9.62,33)) holoScale(24, vec(0.9,0.09,0.6)) holoAng(24, ang(-30,0,0)) holoMaterial(24,"models/props/cs_assault/metal_stairs1")
+    holoCreate(25) holoModel(25, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(25, E) holoPos(25, E:pos() + vec(-6,9.62,33)) holoScale(25, vec(0.9,0.09,0.6)) holoAng(25, ang(-30,0,0)) holoMaterial(25,"models/props/cs_assault/metal_stairs1")
+    holoCreate(26) holoModel(26, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(26, E) holoPos(26, E:pos() + vec(-17,-13.5,26)) holoScale(26, vec(1.5,0.15,0.6)) holoAng(26, ang(-30,30,0)) holoMaterial(26,"models/props/cs_assault/metal_stairs1")
+    holoCreate(27) holoModel(27, "models/sprops/rectangles/size_1_5/rect_6x12x3.mdl") holoParent(27, E) holoPos(27, E:pos() + vec(-17,13.5,26)) holoScale(27, vec(1.5,0.15,0.6)) holoAng(27, ang(-30,-30,0)) holoMaterial(27,"models/props/cs_assault/metal_stairs1")
+    Base = holoCreate(28) holoModel(28, "models/sprops/cylinders/size_4/cylinder_9x12.mdl") holoPos(28, E:pos() + vec(0,0,25)) holoScale(28, vec(0.85,0.85,0.4)) holoAng(28, ang(0,50,0)) holoMaterial(28,"models/props/cs_assault/metal_stairs1") #+ 
+    holoCreate(29) holoModel(29, "models/sprops/cylinders/size_4/cylinder_9x12.mdl") holoParent(29, Base) holoPos(29, E:pos() + vec(0,0,27)) holoScale(29, vec(0.64,0.74,0.4)) holoAng(29,ang(0,0,0)) holoMaterial(29,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(30) holoModel(30, "models/sprops/cylinders/size_1/cylinder_1_5x18.mdl") holoParent(30, Base) holoPos(30, E:pos() + vec(0,0,39)) holoScale(30, vec(0.7,0.7,0.48)) holoAng(30,ang(0,0,90)) holoMaterial(30,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(31) holoModel(31, "models/sprops/geometry/hdisc_12.mdl") holoParent(31, Base) holoPos(31, E:pos() + vec(0,4.5,29.85)) holoScale(31, vec(0.5,0.2,0.7)) holoAng(31,ang(0,0,180)) holoMaterial(31,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(32) holoModel(32, "models/sprops/geometry/hdisc_12.mdl") holoParent(32, Base) holoPos(32, E:pos() + vec(0,-4.5,29.85)) holoScale(32, vec(0.55,0.2,0.7)) holoAng(32,ang(0,0,180)) holoMaterial(32,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(33) holoModel(33, "models/sprops/rectangles/size_2_5/rect_18x30x3.mdl") holoParent(33, Base) holoPos(33, E:pos() + vec(0,0,32)) holoScale(33, vec(0.3,1.1,0.25)) holoMaterial(33,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(34) holoModel(34, "models/sprops/rectangles/size_2_5/rect_18x30x3.mdl") holoParent(34, Base) holoPos(34, E:pos() + vec(0,9.5,36.8)) holoScale(34, vec(0.3,0.5,0.25)) holoAng(34, ang(0,0,90)) holoMaterial(34,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(35) holoModel(35, "models/sprops/rectangles/size_2_5/rect_18x30x3.mdl") holoParent(35, Base) holoPos(35, E:pos() + vec(0,-9.5,36.8)) holoScale(35, vec(0.3,0.5,0.25)) holoAng(35, ang(0,0,90)) holoMaterial(35,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(36) holoModel(36, "models/sprops/cylinders/size_1/cylinder_1_5x18.mdl") holoParent(36, Base) holoPos(36, E:pos() + vec(0,0,37)) holoScale(36, vec(1,1,1.2)) holoAng(36,ang(0,0,90)) holoMaterial(36,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(37) holoModel(37, "models/sprops/cylinders/size_1/cylinder_1_5x18.mdl") holoParent(37, Base) holoPos(37, E:pos() + vec(0,11,37)) holoScale(37, vec(2.8,2.8,0.06)) holoAng(37,ang(0,0,90)) holoMaterial(37,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(38) holoModel(38, "models/sprops/cylinders/size_1/cylinder_1_5x18.mdl") holoParent(38, Base) holoPos(38, E:pos() + vec(0,-11,37)) holoScale(38, vec(2.8,2.8,0.06)) holoAng(38,ang(0,0,90)) holoMaterial(38,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(39) holoModel(39, "models/sprops/cylinders/size_1/cylinder_1_5x18.mdl") holoParent(39, Base) holoPos(39, E:pos() + vec(0,-12,37)) holoScale(39, vec(1.7,1.7,0.06)) holoAng(39,ang(0,0,90)) holoMaterial(39,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(40) holoModel(40, "models/sprops/cylinders/size_1/cylinder_1_5x18.mdl") holoParent(40, Base) holoPos(40, E:pos() + vec(0,12,37)) holoScale(40, vec(1.7,1.7,0.06)) holoAng(40,ang(0,0,90)) holoMaterial(40,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(41) holoModel(41, "models/sprops/cuboids/height24/size_1/cube_24x36x24.mdl") holoParent(41, Base) holoPos(41, E:pos() + vec(-3,0,39)) holoScale(41, vec(0.6,0.7,0.48)) holoMaterial(41,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(42) holoModel(42, "models/sprops/cuboids/height24/size_1/cube_24x36x24.mdl") holoParent(42, Base) holoPos(42, E:pos() + vec(8,0,39)) holoScale(42, vec(0.1,0.74,0.52)) holoColor(42, vec(255,0,0)) holoMaterial(42,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(43) holoModel(43, "models/sprops/cylinders/size_5/cylinder_12x3.mdl") holoParent(43, Base) holoPos(43, E:pos() + vec(19,0,39)) holoScale(43, vec(2,2.2,4.2)) holoColor(43, vec(255,0,0)) holoMaterial(43,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(44) holoModel(44, "models/sprops/cuboids/height24/size_1/cube_24x36x24.mdl") holoParent(44, Base) holoPos(44, E:pos() + vec(-14,0,39)) holoScale(44, vec(0.01,0.7,0.48)) holoColor(44,vec(255,0,0)) holoMaterial(44,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(45) holoModel(45, "models/sprops/misc/domes/size_1/dome_12x6.mdl") holoParent(45, Base) holoPos(45, E:pos() + vec(19,0,45)) holoScale(45, vec(2,2,0.3)) holoMaterial(45,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(46) holoModel(46, "models/sprops/geometry/fring_18.mdl") holoParent(46, Base) holoPos(46, E:pos() + vec(-14.5,-4,37)) holoScale(46, vec(0.4,0.1,0.4)) holoAng(46,ang(90,0,90)) holoMaterial(46,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(47) holoModel(47, "models/sprops/geometry/fring_18.mdl") holoParent(47, Base) holoPos(47, E:pos() + vec(-14.5,-4,37)) holoScale(47, vec(0.3,1.9,0.3)) holoAng(47,ang(90,0,90)) holoMaterial(47,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(48) holoModel(48, "models/sprops/geometry/hring_18.mdl") holoParent(48, Base) holoPos(48, E:pos() + vec(-19,-4,36.1)) holoScale(48, vec(0.3,1.6,0.3)) holoAng(48,ang(0,90,180)) holoMaterial(48,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(49) holoModel(49, "models/sprops/geometry/fring_18.mdl") holoParent(49, Base) holoPos(49, E:pos() + vec(-22,-4,37.5)) holoScale(49, vec(0.3,1,0.3)) holoAng(49,ang(90,0,90)) holoMaterial(49,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(50) holoModel(50, "models/sprops/cylinders/size_5/cylinder_12x3.mdl") holoParent(50, Base) holoPos(50, E:pos() + vec(19,0,43)) holoScale(50, vec(2.1,2.2,0.3)) holoMaterial(50,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(51) holoModel(51, "models/sprops/cylinders/size_5/cylinder_12x3.mdl") holoParent(51, Base) holoPos(51, E:pos() + vec(19,0,35)) holoScale(51, vec(2.1,2.2,0.3)) holoMaterial(51,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(52) holoModel(52, "models/sprops/cylinders/size_3/cylinder_6x6.mdl") holoParent(52, Base) holoPos(52, E:pos() + vec(-14.5,6,37)) holoScale(52, vec(0.3,0.3,0.1)) holoAng(52,ang(90,0,0)) holoMaterial(52 ,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(53) holoModel(53, "models/sprops/cylinders/size_3/cylinder_6x6.mdl") holoParent(53, Base) holoPos(53, E:pos() + vec(-14.8,6,37)) holoScale(53, vec(0.2,0.2,0.1)) holoAng(53,ang(90,0,0)) holoColor(53,vec(255,0,0)) holoMaterial(53,"phoenix_storms/mat/mat_phx_plastic") #+
+    holoCreate(54) holoModel(54, "models/sprops/cylinders/size_3/cylinder_6x6.mdl") holoParent(54, Base) holoPos(54, E:pos() + vec(-14.5,2,35)) holoScale(54, vec(0.3,0.3,0.1)) holoAng(54,ang(90,0,0)) holoMaterial(54,"models/props/cs_assault/metal_stairs1") #+
+    holoCreate(55) holoModel(55, "models/sprops/cylinders/size_3/cylinder_6x6.mdl") holoParent(55, Base) holoPos(55, E:pos() + vec(-14.8,2,35)) holoScale(55, vec(0.2,0.2,0.1)) holoAng(55,ang(90,0,0)) holoColor(55,vec(0)) holoMaterial(55,"models/props/cs_assault/metal_stairs1") #+
+}else{
+    if(List:count()){
+        M = holoCreate(57) holoPos(57, (List[1,entity]):pos()) holoColor(57,vec(0)) holoAlpha(57, 0) 
+        Base:setAng(ang(0,45+(E:pos()-M:pos()):toAngle():yaw(),0))
+        } else {
+            holoDelete(57)
+            if(1){
+                interval(1)
+                Rotate += 5
+                Base:setAng(ang(0,Rotate,0))
+            }
+        }
+}
+
+
